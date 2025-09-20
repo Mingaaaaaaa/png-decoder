@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNG 图片解析器</title>
+    <link rel="stylesheet" href="png-parser.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🖼 PNG 图片解析器</h1>
+            <p>上传PNG图片，深入了解其二进制结构和数据块信息</p>
+        </div>
+
+        <div class="upload-section">
+            <div class="upload-preview-container">
+                <div class="upload-area-container">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">📁</div>
+                        <div class="upload-text">点击选择PNG图片或拖拽文件到此处</div>
+                        <div class="upload-hint">支持PNG格式，最大10MB</div>
+                    </div>
+                    <div class="url-input-container">
+                        <div class="url-input-label">或通过URL加载图片：</div>
+                        <div class="url-input-group">
+                            <input type="url" id="urlInput" placeholder="输入PNG图片URL..." class="url-input"
+                                value="https://upload.wikimedia.org/wikipedia/commons/1/14/Animated_PNG_example_bouncing_beach_ball.png">
+                            <button id="loadUrlButton" class="load-url-button">加载</button>
+                        </div>
+                    </div>
+                    <input type="file" id="fileInput" accept=".png,image/png">
+                </div>
+                <div class="image-preview" id="imagePreview">
+                    <!-- 图片预览将在这里显示 -->
+                </div>
+            </div>
+        </div>
+
+        <div class="result-section" id="resultSection">
+
+            <div class="section">
+                <h2 class="section-title">📊 图片概览</h2>
+                <div class="summary-grid" id="summaryGrid">
+                    <!-- 概览信息将在这里显示 -->
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">🧩 数据块信息 & 🔍 十六进制查看器</h2>
+                <div class="chunk-hex-container">
+                    <div class="chunk-section">
+                        <div class="chunk-list" id="chunkList">
+                            <!-- 数据块列表将在这里显示 -->
+                        </div>
+                    </div>
+                    <div class="hex-section">
+                        <div class="hex-viewer" id="hexViewer">
+                            <!-- 十六进制数据将在这里显示 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="png-parser.js"></script>
+</body>
+
+</html>
