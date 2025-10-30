@@ -535,7 +535,7 @@ class App {
     }
 
     async loadDemoImage() {
-        const demoUrl = 'https://cdn.statically.io/gh/Mingaaaaaaa/PictureBed@master/common-pic/b_2cae10cdf14221994d7f9bb18c341c5f.1jjq0pjm9s1s.png';
+        const demoUrl = 'https://cdn.jsdmirror.com/gh/Mingaaaaaaa/PictureBed@master/common-pic/b_2cae10cdf14221994d7f9bb18c341c5f.1jjq0pjm9s1s.png';
 
         this.showLoading();
 
